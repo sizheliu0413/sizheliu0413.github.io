@@ -170,10 +170,10 @@
         
         ///////////////////////////////////////////////////////////
         // add a static cube
-geometry = new THREE.IcosahedronGeometry(5.31, 0);
-material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, wireframe: true, wireframeLinewidth: 1, transparent: true, opacity: 0.44});
+geometry = new THREE.IcosahedronGeometry(5.31, 2);
+material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, transparent: true, opacity: 0.55});
 mesh = new THREE.Mesh(geometry, material);
-mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.64;
+mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.56;
         arWorldRoot.add(mesh);
         // end cube code
         ///////////////////////////////////////////////////////////
