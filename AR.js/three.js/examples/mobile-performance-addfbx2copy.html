@@ -170,9 +170,10 @@
         
         ///////////////////////////////////////////////////////////
         // add a static cube
-geometry = new THREE.TorusGeometry(9.63, 3.16, 9, 9, 6.28);
-material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+geometry = new THREE.IcosahedronGeometry(113.15, 0);
+material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, wireframe: true, wireframeLinewidth: 1, transparent: true, opacity: 0.44});
 mesh = new THREE.Mesh(geometry, material);
+mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.64;
         arWorldRoot.add(mesh);
         // end cube code
         ///////////////////////////////////////////////////////////
