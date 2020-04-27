@@ -221,21 +221,21 @@
         
         ///////////////////////////////////////////////////////////
         // add a fbx model with animation
-//        var loader = new THREE.FBXLoader();
-//        loader.load( '../../data/data/handGLoptB.fbx', function ( object ) {
-//            object.mixer = new THREE.AnimationMixer( object );
-//            mixers.push( object.mixer );
-//            var action = object.mixer.clipAction( object.animations[ 0 ] );
-//            action.play();
-//            object.traverse( function ( child ) {
-//                if ( child.isMesh ) {
-//                    child.castShadow = true;
-//                    child.receiveShadow = true;
-//                }
-//            } );
-//            object.scale.set(.02, .02, .02);
-//            arWorldRoot.add( object );
-//        } );
+        var loader = new THREE.FBXLoader();
+        loader.load( '../../data/data/handGLoptB.fbx', function ( object ) {
+            object.mixer = new THREE.AnimationMixer( object );
+            mixers.push( object.mixer );
+            var action = object.mixer.clipAction( object.animations[ 0 ] );
+            action.play();
+            object.traverse( function ( child ) {
+                if ( child.isMesh ) {
+                    child.castShadow = true;
+                    child.receiveShadow = true;
+                }
+            } );
+            object.scale.set(.02, .02, .02);
+            arWorldRoot.add( object );
+        } );
         //end fbx code
         ///////////////////////////////////////////////////////////
         
@@ -252,7 +252,7 @@
          };
 
          var textureLoader = new THREE.TextureLoader( manager );
-         var texture = textureLoader.load( '../../data/data/head/tex.png' );
+         var texture = textureLoader.load( '../../data/data/cheetah.jpeg' );
 
          // obj model
          var onProgress = function ( xhr ) {
@@ -266,7 +266,7 @@
          };
 
          var loader = new THREE.OBJLoader( manager );
-         loader.load( '../../data/data/head/face.obj', function ( object ) {
+         loader.load( '../../data/data/male02/male02.obj', function ( object ) {
 
              object.traverse( function ( child ) {
 
@@ -304,14 +304,14 @@
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         
 	    new THREE.MTLLoader()
-            .setPath( '../../data/data/head/' )
-	    .load( 'face.mtl', function ( materials ) {
+            .setPath( '../../data/data/' )
+	    .load( 'mtltest3.mtl', function ( materials ) {
                 materials.preload();
                 
 		new THREE.OBJLoader()
                     .setMaterials( materials )
-                    .setPath( '../../data/data/head/' )
-		    .load( 'face.obj', function ( object ) {
+                    .setPath( '../../data/data/' )
+		    .load( 'mtltest3.obj', function ( object ) {
                         object.scale.set(.25, .25, .25);
                         arWorldRoot.add( object );
                     }, onProgress, onError );
