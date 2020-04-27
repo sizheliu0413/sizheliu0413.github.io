@@ -248,16 +248,16 @@
 
          };
 
-//         var textureLoader = new THREE.TextureLoader( manager );
-//         var texture = textureLoader.load( '../../data/data/head/tex.png' );
-//
-//         // obj model
-//         var onProgress = function ( xhr ) {
-//             if ( xhr.lengthComputable ) {
-//                 var percentComplete = xhr.loaded / xhr.total * 100;
-//                 console.log( Math.round(percentComplete, 2) + '% downloaded' );
-//             }
-//         };
+         var textureLoader = new THREE.TextureLoader( manager );
+         var texture = textureLoader.load( '../../data/data/head/tex.png' );
+
+         // obj model
+         var onProgress = function ( xhr ) {
+             if ( xhr.lengthComputable ) {
+                 var percentComplete = xhr.loaded / xhr.total * 100;
+                 console.log( Math.round(percentComplete, 2) + '% downloaded' );
+             }
+         };
 
          var onError = function ( xhr ) {
          };
