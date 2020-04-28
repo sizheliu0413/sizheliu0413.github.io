@@ -168,20 +168,20 @@
         //      you can copy source code for simple shape from the three.js playground here: http://threejsplaygnd.brangerbriz.net/gui/
         //      for more on using 3D models with AR.js and A-Frame see here: https://medium.com/@akashkuttappa/using-3d-models-with-ar-js-and-a-frame-84d462efe498
         //////////////////////////////////////////////////////////////////////////////////
-        var arWorldRoot = smoothedRoot;
-        var geometry, material, mesh;
-        
-//        ///////////////////////////////////////////////////////////
-//        // add a static cube
-        geometry = new THREE.CubeGeometry(1,1,1);
-        material = new THREE.MeshNormalMaterial({
-            transparent : true,
-            opacity: 0.5,
-            side: THREE.DoubleSide
-        }); 
-        mesh = new THREE.Mesh( geometry, material );
-        mesh.position.y	= geometry.parameters.height/2
-        arWorldRoot.add(mesh);
+//        var arWorldRoot = smoothedRoot;
+//        var geometry, material, mesh;
+//        
+////        ///////////////////////////////////////////////////////////
+////        // add a static cube
+//        geometry = new THREE.CubeGeometry(1,1,1);
+//        material = new THREE.MeshNormalMaterial({
+//            transparent : true,
+//            opacity: 0.5,
+//            side: THREE.DoubleSide
+//        }); 
+//        mesh = new THREE.Mesh( geometry, material );
+//        mesh.position.y	= geometry.parameters.height/2
+//        arWorldRoot.add(mesh);
 //        // end cube code
 //        ///////////////////////////////////////////////////////////
         
@@ -191,13 +191,13 @@
         //icosphere: example from from 3js playground 
         //add the geometry, material, and mesh lines from the 3js GUI
         //MAKE SURE SCALE IS 1 (a scale of 1 will mean your object is as big as the image target)
-        geometry = new THREE.CubeGeometry(1, 1, 1);
-        material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
-        mesh = new THREE.Mesh(geometry, material);
-        
-        //Keep these lines
-        mesh.position.y	= 0.5 //position y equals how far away from target 
-        arWorldRoot.add( mesh ); //instead of adding mesh to the scene right away we add only when the target is detected
+//        geometry = new THREE.CubeGeometry(1, 1, 1);
+//        material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+//        mesh = new THREE.Mesh(geometry, material);
+//        
+//        //Keep these lines
+//        mesh.position.y	= 0.5 //position y equals how far away from target 
+//        arWorldRoot.add( mesh ); //instead of adding mesh to the scene right away we add only when the target is detected
         //end icosphere code
         ///////////////////////////////////////////////////////////
         
